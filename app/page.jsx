@@ -13,6 +13,8 @@ const DisplacementSphere = dynamic(
   { ssr: false }
 );
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || (process.env.NODE_ENV === 'production' ? '/cv' : '');
+
 export default function HomePage() {
   const { isDSPMode, setIsDSPMode, setTitleRect, triggerFrameReassign } = useDSP();
   const titleRef = useRef(null);
@@ -139,7 +141,7 @@ export default function HomePage() {
               </a>
             </Button>
             <Button variant="outline" className="rounded-full border-black/10 hover:bg-black hover:text-white transition-all" asChild>
-              <a href="assets/Maor Assayag CV - Senior R&D Team Lead.pdf" download>
+              <a href={`${basePath}/assets/Maor Assayag CV - Senior R&D Team Lead.pdf`} download>
                 <Download className="w-4 h-4 mr-2" />
                 Download CV
               </a>
@@ -439,7 +441,7 @@ export default function HomePage() {
             <div className="glass p-6 rounded-2xl flex justify-between items-center hover:bg-white/80 transition-colors relative overflow-hidden group">
               <div className="absolute inset-0 flex items-center justify-end opacity-10 pointer-events-none">
                 <img
-                  src={`${process.env.NODE_ENV === 'production' ? '/cv-website' : ''}/assets/university_of_haifa.png`}
+                  src={`${basePath}/assets/university_of_haifa.png`}
                   alt="University of Haifa"
                   className="w-48 h-48 object-contain transition-all duration-500"
                 />
@@ -454,7 +456,7 @@ export default function HomePage() {
             <div className="glass p-6 rounded-2xl flex justify-between items-center hover:bg-white/80 transition-colors relative overflow-hidden group">
               <div className="absolute inset-0 flex items-center justify-end opacity-10 pointer-events-none">
                 <img
-                  src={`${process.env.NODE_ENV === 'production' ? '/cv-website' : ''}/assets/university_of_haifa.png`}
+                  src={`${basePath}/assets/university_of_haifa.png`}
                   alt="University of Haifa"
                   className="w-48 h-48 object-contain transition-all duration-500"
                 />
@@ -468,7 +470,7 @@ export default function HomePage() {
             <div className="glass p-6 rounded-2xl flex justify-between items-center hover:bg-white/80 transition-colors relative overflow-hidden group">
               <div className="absolute inset-0 flex items-center justify-end opacity-10 pointer-events-none">
                 <img
-                  src={`${process.env.NODE_ENV === 'production' ? '/cv-website' : ''}/assets/idf_logo.png`}
+                  src={`${basePath}/assets/idf_logo.png`}
                   alt="IDF"
                   className="w-48 h-48 object-contain transition-all duration-500"
                 />
@@ -482,7 +484,7 @@ export default function HomePage() {
             <div className="glass p-6 rounded-2xl flex justify-between items-center hover:bg-white/80 transition-colors relative overflow-hidden group">
               <div className="absolute inset-0 flex items-center justify-end opacity-10 pointer-events-none">
                 <img
-                  src={`${process.env.NODE_ENV === 'production' ? '/cv-website' : ''}/assets/IsraeliNavy.png`}
+                  src={`${basePath}/assets/IsraeliNavy.png`}
                   alt="Israeli Navy"
                   className="w-48 h-48 object-contain transition-all duration-500"
                 />
@@ -496,7 +498,7 @@ export default function HomePage() {
             <div className="glass p-6 rounded-2xl flex justify-between items-center hover:bg-white/80 transition-colors relative overflow-hidden group">
               <div className="absolute inset-0 flex items-center justify-end opacity-10 pointer-events-none">
                 <img
-                  src={`${process.env.NODE_ENV === 'production' ? '/cv-website' : ''}/assets/IsraeliNavy.png`}
+                  src={`${basePath}/assets/IsraeliNavy.png`}
                   alt="Israeli Navy"
                   className="w-48 h-48 object-contain transition-all duration-500"
                 />
@@ -510,7 +512,7 @@ export default function HomePage() {
             <div className="glass p-6 rounded-2xl flex justify-between items-center hover:bg-white/80 transition-colors relative overflow-hidden group">
               <div className="absolute inset-0 flex items-center justify-end opacity-10 pointer-events-none">
                 <img
-                  src={`${process.env.NODE_ENV === 'production' ? '/cv-website' : ''}/assets/IsraeliNavy.png`}
+                  src={`${basePath}/assets/IsraeliNavy.png`}
                   alt="Israeli Navy"
                   className="w-48 h-48 object-contain transition-all duration-500"
                 />
@@ -524,7 +526,7 @@ export default function HomePage() {
             <div className="glass p-6 rounded-2xl flex justify-between items-center hover:bg-white/80 transition-colors relative overflow-hidden group">
               <div className="absolute inset-0 flex items-center justify-end opacity-10 pointer-events-none">
                 <img
-                  src={`${process.env.NODE_ENV === 'production' ? '/cv-website' : ''}/assets/IsraeliNavy.png`}
+                  src={`${basePath}/assets/IsraeliNavy.png`}
                   alt="Israeli Navy"
                   className="w-48 h-48 object-contain transition-all duration-500"
                 />
@@ -538,7 +540,7 @@ export default function HomePage() {
             <div className="glass p-6 rounded-2xl flex justify-between items-center hover:bg-white/80 transition-colors relative overflow-hidden group">
               <div className="absolute inset-0 flex items-center justify-end opacity-10 pointer-events-none">
                 <img
-                  src={`${process.env.NODE_ENV === 'production' ? '/cv-website' : ''}/assets/Ben-Gurion_University_of_the_Negev.png`}
+                  src={`${basePath}/assets/Ben-Gurion_University_of_the_Negev.png`}
                   alt="Ben-Gurion University"
                   className="w-48 h-48 object-contain transition-all duration-500"
                 />
@@ -554,7 +556,7 @@ export default function HomePage() {
         {/* Bottom Contact Buttons */}
         <div className={`flex justify-center gap-4 ${fadeClass}`}>
           <Button variant="outline" className="rounded-full border-black/10 hover:bg-black hover:text-white transition-all" asChild>
-            <a href="assets/Maor Assayag CV - Senior R&D Team Lead.pdf" download>
+            <a href={`${basePath}/assets/Maor Assayag CV - Senior R&D Team Lead.pdf`} download>
               <Download className="w-4 h-4 mr-2" />
               Download CV
             </a>
